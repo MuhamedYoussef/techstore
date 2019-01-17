@@ -1935,41 +1935,6 @@ button.bg-light:focus {
           flex: 1;
 }
 
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Thin), url("Montserrat, sans-serifRoboto-Thin.eot");
-  src: url("Montserrat, sans-serifRoboto-Thin.eot?#iefix") format("embedded-opentype"), url("Montserrat, sans-serifRoboto-Thin.woff2") format("woff2"), url("Montserrat, sans-serifRoboto-Thin.woff") format("woff"), url("Montserrat, sans-serifRoboto-Thin.ttf") format("truetype");
-  font-weight: 200;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Light), url("Montserrat, sans-serifRoboto-Light.eot");
-  src: url("Montserrat, sans-serifRoboto-Light.eot?#iefix") format("embedded-opentype"), url("Montserrat, sans-serifRoboto-Light.woff2") format("woff2"), url("Montserrat, sans-serifRoboto-Light.woff") format("woff"), url("Montserrat, sans-serifRoboto-Light.ttf") format("truetype");
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Regular), url("Montserrat, sans-serifRoboto-Regular.eot");
-  src: url("Montserrat, sans-serifRoboto-Regular.eot?#iefix") format("embedded-opentype"), url("Montserrat, sans-serifRoboto-Regular.woff2") format("woff2"), url("Montserrat, sans-serifRoboto-Regular.woff") format("woff"), url("Montserrat, sans-serifRoboto-Regular.ttf") format("truetype");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("Montserrat, sans-serifRoboto-Medium.eot");
-  src: url("Montserrat, sans-serifRoboto-Medium.eot?#iefix") format("embedded-opentype"), url("Montserrat, sans-serifRoboto-Medium.woff2") format("woff2"), url("Montserrat, sans-serifRoboto-Medium.woff") format("woff"), url("Montserrat, sans-serifRoboto-Medium.ttf") format("truetype");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("Montserrat, sans-serifRoboto-Bold.eot");
-  src: url("Montserrat, sans-serifRoboto-Bold.eot?#iefix") format("embedded-opentype"), url("Montserrat, sans-serifRoboto-Bold.woff2") format("woff2"), url("Montserrat, sans-serifRoboto-Bold.woff") format("woff"), url("Montserrat, sans-serifRoboto-Bold.ttf") format("truetype");
-  font-weight: 700;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;

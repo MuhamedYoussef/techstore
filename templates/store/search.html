@@ -10,16 +10,16 @@
         <div class="row">
           {% for product in products %}
           <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-            <div class="card pt-2 card-cascade wider bg-dark card-ecommerce">
+            <div class="card card-cascade wider bg-dark card-ecommerce">
               <div class="view view-cascade overlay">
                 <img
                   src="{{ product.image_url }}"
-                  class="card-img-top"
+                  class="card-img-top pt-2"
                   alt="product photo"
                   style="max-height:180px;"
                 />
                 <a href="{% url 'product' slug=product.slug %}">
-                  <div class="mask rgba-white-slight"></div>
+                  <div class="mask pt-2 rgba-white-slight"></div>
                 </a>
               </div>
               <div class="card-body card-body-cascade text-center">

@@ -1,0 +1,138 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark special-color-dark fixed-top scrolling-navbar"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand text-info" href="{% url 'index' %}">
+      <span class="font-weight-bold">Tech</span>Store
+    </a>
+
+    <!-- Collapse button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#basicExampleNav"
+      aria-controls="basicExampleNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'index' %}">Home</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Today's offer</a></li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >Products</a
+          >
+          <div
+            class="dropdown-menu dropdown-primary"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <a class="dropdown-item" href="{% url 'search' %}?q=&cat=3"
+              >Computers</a
+            >
+            <a class="dropdown-item" href="{% url 'search' %}?q=&cat=1"
+              >Laptops</a
+            >
+            <a class="dropdown-item" href="{% url 'search' %}?q=&cat=2"
+              >Headset</a
+            >
+          </div>
+        </li>
+      </ul>
+
+      <div class="ml-auto">
+        <form action="{% url 'search' %}" class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control form-control-sm"
+            type="search"
+            name="q"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <input type="hidden" name="cat" />
+        </form>
+      </div>
+
+      <div class="ml-4">
+        <button
+          href=""
+          class="btn btn-outline-green text-white p-2 rounded green-text"
+          data-toggle="modal"
+          data-target="#CartModal"
+          onclick="get_cart_items()"
+        >
+          <i class="fas fa-shopping-cart fa-2x"> </i>
+          <span class="badge badge-pill badge-primary" id="items_in_cart">
+            0
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Modal: modalCart -->
+<div
+  class="modal fade"
+  id="CartModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content elegant-color text-light">
+      <!--Header-->
+      <div class="modal-header bg-dark border-0 shadow">
+        <h4 class="modal-title font-weight-bold text-primary" id="myModalLabel">
+          YOUR CART ITEMS
+        </h4>
+        <button
+          type="button"
+          class="close text-light"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Product name</th>
+              <th>Price</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody id="cart_modal_template"></tbody>
+        </table>
+      </div>
+      <!--Footer-->
+      <div class="modal-footer border-0">
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          data-dismiss="modal"
+        >
+          Close
+        </button>
+        <a href="{% url 'cart' %}" class="btn btn-primary">Checkout</a>
+      </div>
+    </div>
+  </div>
+</div>

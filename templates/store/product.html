@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% load static %}
+
+<!-- Start main -->
+{% block content %}
+<main class="container pt-5">
+  <div class="row">
+    <div class="col-lg-4 col-md-4 p-3">
+      <img
+        src="{{ product.image_url }}"
+        class="img-fluid rounded"
+        style="max-height:300px;"
+        alt="product image"
+      />
+    </div>
+    <div class="col-lg-6 col-md-5 p-3">
+      <h4 class="text-muted">{{ product.brand }}</h4>
+      <h2 class="font-weight-bold">{{ product.name }}</h2>
+      <p>{{ product.details | linebreaks }}</p>
+    </div>
+    <div class="col-lg-2 col-md-3 pt-5">
+      <p class="font-weight-bold my-3">{{ product.price }}$</p>
+      <button
+        class="btn btn-block btn-green my-2 rounded"
+        onclick="AddToCart('{{ product.id }}')"
+      >
+        ADD TO CART
+      </button>
+    </div>
+  </div>
+</main>
+{% endblock %}

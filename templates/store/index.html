@@ -16,14 +16,14 @@
           <div class="col-md-4 col-sm-6 mb-lg-0 mb-4">
             <div
               class="card card-cascade wider bg-dark card-ecommerce mx-auto"
-              style="max-width:300px;"
+              style="max-width:300px;height:100%;"
             >
               <div class="view view-cascade overlay">
                 <img
                   src="{{ best.image_url }}"
-                  class="card-img-top pt-2"
+                  class="card-img-top pt-2 mx-auto"
                   alt="product photo"
-                  style="max-height:200px;"
+                  style="height:200px;"
                 />
                 <a href="{% url 'product' slug=best.slug %}">
                   <div class="mask pt-2 rgba-white-slight"></div>
@@ -41,29 +41,29 @@
                   </strong>
                 </h4>
                 <p class="card-text">{{ best.summary }}...</p>
-                <div class="card-footer px-1">
-                  <span class="float-left font-weight-bold"
-                    >{{ best.price }}$</span
+              </div>
+              <div class="card-footer py-3">
+                <span class="float-left font-weight-bold">
+                  $ {{ best.price }}</span
+                >
+                <span class="float-right">
+                  <a
+                    href="{% url 'product' slug=best.slug %}"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Quick Look"
                   >
-                  <span class="float-right">
-                    <a
-                      href="{% url 'product' slug=best.slug %}"
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Quick Look"
-                    >
-                      <i class="fas fa-eye grey-text ml-3"></i>
-                    </a>
-                    <a
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Add to Wishlist"
-                      onclick="AddToCart('{{ best.id }}')"
-                    >
-                      <i class="fas fa-shopping-cart grey-text ml-3"></i>
-                    </a>
-                  </span>
-                </div>
+                    <i class="fas fa-eye grey-text ml-3"></i>
+                  </a>
+                  <a
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Add to Wishlist"
+                    onclick="AddToCart('{{ best.id }}')"
+                  >
+                    <i class="fas fa-shopping-cart grey-text ml-3"></i>
+                  </a>
+                </span>
               </div>
             </div>
           </div>
@@ -81,11 +81,14 @@
         <div class="row">
           {% for laptop in laptops %}
           <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-            <div class="card card-cascade wider bg-dark card-ecommerce">
+            <div
+              class="card card-cascade wider bg-dark card-ecommerce"
+              style="height:100%;"
+            >
               <div class="view view-cascade overlay">
                 <img
                   src="{{ laptop.image_url }}"
-                  class="card-img-top pt-2"
+                  class="card-img-top pt-2 mx-auto"
                   alt="laptop photo"
                   style="height:150px;"
                 />
@@ -102,29 +105,29 @@
                   </strong>
                 </h4>
                 <p class="card-text">{{ laptop.summary }}...</p>
-                <div class="card-footer px-1">
-                  <span class="float-left font-weight-bold">
-                    {{ laptop.price }}$
-                  </span>
-                  <span class="float-right">
-                    <a
-                      href="{% url 'product' slug=laptop.slug %}"
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Quick Look"
-                    >
-                      <i class="fas fa-eye grey-text ml-3"></i>
-                    </a>
-                    <a
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Add to Wishlist"
-                      onclick="AddToCart('{{ laptop.id }}')"
-                    >
-                      <i class="fas fa-shopping-cart grey-text ml-3"></i>
-                    </a>
-                  </span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="float-left font-weight-bold">
+                  ${{ laptop.price }}
+                </span>
+                <span class="float-right">
+                  <a
+                    href="{% url 'product' slug=laptop.slug %}"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Quick Look"
+                  >
+                    <i class="fas fa-eye grey-text ml-3"></i>
+                  </a>
+                  <a
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Add to Wishlist"
+                    onclick="AddToCart('{{ laptop.id }}')"
+                  >
+                    <i class="fas fa-shopping-cart grey-text ml-3"></i>
+                  </a>
+                </span>
               </div>
             </div>
           </div>
@@ -142,11 +145,14 @@
         <div class="row">
           {% for headset in headsets %}
           <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-            <div class="card card-cascade wider bg-dark card-ecommerce">
+            <div
+              class="card card-cascade wider bg-dark card-ecommerce"
+              style="height:100%;"
+            >
               <div class="view view-cascade overlay">
                 <img
                   src="{{ headset.image_url }}"
-                  class="card-img-top pt-2"
+                  class="card-img-top pt-2 mx-auto"
                   alt="headset photo"
                   style="height:150px;"
                 />
@@ -163,29 +169,29 @@
                   </strong>
                 </h4>
                 <p class="card-text">{{ headset.summary }}...</p>
-                <div class="card-footer px-1">
-                  <span class="float-left font-weight-bold">
-                    {{ headset.price }}$
-                  </span>
-                  <span class="float-right">
-                    <a
-                      href="{% url 'product' slug=headset.slug %}"
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Quick Look"
-                    >
-                      <i class="fas fa-eye grey-text ml-3"></i>
-                    </a>
-                    <a
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Add to Wishlist"
-                      onclick="AddToCart('{{ headset.id }}')"
-                    >
-                      <i class="fas fa-shopping-cart grey-text ml-3"></i>
-                    </a>
-                  </span>
-                </div>
+              </div>
+              <div class="card-footer">
+                <span class="float-left font-weight-bold">
+                  ${{ headset.price }}
+                </span>
+                <span class="float-right">
+                  <a
+                    href="{% url 'product' slug=headset.slug %}"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Quick Look"
+                  >
+                    <i class="fas fa-eye grey-text ml-3"></i>
+                  </a>
+                  <a
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Add to Wishlist"
+                    onclick="AddToCart('{{ headset.id }}')"
+                  >
+                    <i class="fas fa-shopping-cart grey-text ml-3"></i>
+                  </a>
+                </span>
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@
 *.pot
 *.pyc
 __pycache__/
-local.py
+dev.py
 db.sqlite3
 media
 

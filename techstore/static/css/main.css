@@ -10674,6 +10674,11 @@ body {
   height: 100%;
 }
 
+.card-img-top {
+  width: auto;
+  max-width: 100%;
+}
+
 .fa-2x {
   font-size: 1.5em;
 }
@@ -10687,5 +10692,18 @@ input {
 main {
   margin-top: 80px;
   color: #f8f9fa;
+}
+
+#message {
+  position: fixed;
+  top: 90vh;
+  right: 5vw;
+  padding: 8px 10px;
+  border-radius: 7px;
+  z-index: 100;
+}
+
+#message p {
+  margin: 0;
 }
 /*# sourceMappingURL=main.css.map */
